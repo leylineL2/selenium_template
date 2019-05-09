@@ -1,6 +1,6 @@
 # SeleniumTemplate
 ## Description
-Selenium on Docker Image Controled python2
+Selenium on Docker Image Controled python3
 
 ## require
 - install docker 
