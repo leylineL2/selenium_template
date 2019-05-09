@@ -12,7 +12,6 @@ options = Options()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-gpu')
-options.binary_location = '/usr/bin/google-chrome'
 options.add_argument('--window-size=1280,1024')
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--disable-desktop-notifications')
@@ -34,8 +33,8 @@ try:
 except FileNotFoundError:
 	print("error: require env.json")
 
-driver = webdriver.Chrome('/selenium/chromedriver',chrome_options=options)
-
+driver = webdriver.Chrome(chrome_options=options)
+time.sleep(3)
 # example login form
 base_url = "https://codepen.io/miroot/pen/qwIgC"
 driver.get(base_url + "")
